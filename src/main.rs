@@ -1,6 +1,14 @@
 use std::io;
 use clap::Parser;
-use muslimdb::util::clap::Args;
+
+#[derive(Parser, Debug)]
+#[command(version)]
+struct Args {
+	#[]
+	options: String,
+	file: String,
+}
+
 
 fn main() -> io::Result<()> {
 	let args = Args::parse();
